@@ -6,14 +6,14 @@ com/example/azuresynapse/queryexecution/RandomQueryExecutionJobRunner.java:22
 To setup users
 com/example/azuresynapse/queryexecution/RandomQueryExecutionJobRunner.java:23
 
-To select tests (default all tests)
+To setup tests (default all tests)
 com.example.azuresynapse.queryexecution.RandomQueryProvider
 
 To run test suite
 com.example.azuresynapse.queryexecution.RandomQueryExecutionJobRunner.main
 
-Get results
-
+To get results
+results/result.txt
 
 
 
