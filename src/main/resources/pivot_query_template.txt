@@ -1,0 +1,20 @@
+SELECT 
+	[serial_number], 
+	[partition_offset], 
+	[timestamp],
+	%s
+FROM
+(SELECT 
+    [serial_number], 
+    [partition_offset], 
+    [timestamp], 
+    [tag], 
+    [tag_value]
+FROM [dbo].[%s]
+WHERE date_partition = %s) AS unpivot_tbl
+PIVOT (  
+MAX(tag_value)  
+FOR tag IN (
+	%s
+)
+) AS pivot_tbl
